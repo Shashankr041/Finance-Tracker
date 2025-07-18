@@ -1,0 +1,186 @@
+/* Reset & Base Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Container with glass effect */
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 750px;
+  margin: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+/* Title and Balance */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.top-controls button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.top-controls button:hover {
+  background-color: #000;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+input, select, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+
+button[type=\"submit\"] {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background 0.3s;
+}
+
+button[type=\"submit\"]:hover {
+  background-color: #45a049;
+}
+
+/* Transaction List */
+#transaction-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+#transaction-list li {
+  background: #f8f8f8;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#transaction-list li button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#transaction-list li button:hover {
+  background-color: #c0392b;
+}
+
+/* Chart & Preview */
+canvas {
+  margin-top: 30px;
+  width: 100% !important;
+  height: auto !important;
+}
+
+#preview {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+#preview table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#preview th, #preview td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Download Button */
+#download-csv {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#download-csv:hover {
+  background-color: #2980b9;
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .container {
+  background: rgba(40, 40, 40, 0.9);
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode button {
+  background: #1e1e1e;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+.dark-mode #transaction-list li {
+  background-color: #222;
+}
+
+.dark-mode #transaction-list li button {
+  background-color: #c0392b;
+}
+.dark-mode h1 {
+  color: #f0f0f0;
+}
